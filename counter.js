@@ -5,7 +5,7 @@ var counter = (function(){
     var _number;
 
     // Приватные методы
-    var _checkPositive = function(x) {
+    var _checkPositive = function(x){
          if(x < 0){
 	         return false;
 	         }else {
@@ -15,7 +15,7 @@ var counter = (function(){
 
     // Публичные методы
     var setValue = function(x){
-        if (_checkInteger(x)) {
+        if (_checkPositive(x)) {
             _number = x;
         } else {
             console.log('Неверное значение');
@@ -46,7 +46,7 @@ var counter = (function(){
 counter.setValue(-3);
 counter.printCounter();
 
-counter.setValue(10);
+counter.setValue(1);
 counter.increaseCounter();
 counter.printCounter();
 counter.decreaseCounter();
